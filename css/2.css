@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {font-family: KOTRAHOPE; margin: 0; padding: 0;}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to top, #FFD4D4, white);
+    color: white;
+    font-size: 20pt;
+    text-shadow: 2px 1px 2px red;
+    padding: 20px;
+}
+img {display: block; margin: auto; width: 800px;}
+main {background: #FFD4D4;}
+p {text-align: center; color: white; font-size: 25pt;}
+
+.big, .bbig {
+    width: 800px;
+}
+.s, .ss {width: 50px; display: inline; }
+.small {margin-left: 550px; margin-top: 3px;}
+.small img:hover {cursor:pointer;}
+
+textarea {
+    display: block; margin: auto; 
+    font-size: 20pt; 
+    text-align: center;
+    line-height: 2;}
+
+a > img {width: 500px;}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>돼지감자</title>
+    <link rel="stylesheet" href="css/2.css">
+</head>
+<body>
+    <header>
+        <p>돼지감자</p>
+    </header>
+    <main>
+        <img class="big" src="/img/d1.jpg" alt="애기2-1">
+            <div class="small">
+                <img src="img/d1.jpg" alt="애기2-1" class="s">
+                <img src="/img/d2.jpg" alt="애기2-2" class="s">
+                <img src="/img/d3.jpg" alt="애기2-3" class="s">
+            </div>
+
+        <script>
+            var big = document.querySelector(".big");
+            var spic = document.querySelectorAll(".s");
+
+            for (let i = 0; i < spic.length; i++) {
+                spic[i].addEventListener("click", change);
+            }
+
+            function change() {
+                var newPic = this.src;
+                big.setAttribute("src", newPic);
+            }
+        </script>
+
+        <p>
+            ⭐<br>
+            아기 때보다 많이 큰 무시<br>
+            노랑과 연두가 섞인 눈이 되었다.<br>
+            이마의 까만 털도 거의 없어졌다.<br>
+            복실복실한 고양이가 되어서,<br>
+            3kg인데도 돼지감자처럼 생겼다.
+        </p>
+        <br>
+        <img class="bbig" src="/img/d4.jpg" alt="애기2-4">
+            <div class="small">
+                <img src="img/d4.jpg" alt="애기2-4" class="ss">
+                <img src="/img/d5.jpg" alt="애기2-5" class="ss">
+                <img src="/img/d6.jpg" alt="애기2-6" class="ss">
+            </div>
+            
+        <script>
+            var bbig = document.querySelector(".bbig");
+            var spic = document.querySelectorAll(".ss");
+    
+            for (let i = 0; i < spic.length; i++) {
+                spic[i].addEventListener("click", change);
+            }
+    
+            function change() {
+                var newPic = this.src;
+                bbig.setAttribute("src", newPic);
+            }
+            </script>
+            
+            <p>
+                🚀<br>
+                여전히 창 밖을 보는 걸 좋아한다.<br>
+                새나 벌레 영상을 틀어주면 다가간다.<br>
+                의사표현이 늘어서 닫힌 문을 보면<br>
+                열어달라고 박박 긁는다.<br>
+                가끔 야옹 소리를 내기도 한다.<br><br><br>
+            </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>민들레 홀씨</title>
+    <link rel="stylesheet" href="css/2.css">
+</head>
+<body>
+    <header>
+        <p>민들레 홀씨</p>
+    </header>
+    <main>
+        <img class="big" src="/img/h1.jpg" alt="애기1-1">
+            <div class="small">
+                <img src="img/h1.jpg" alt="애기1-1" class="s">
+                <img src="/img/h2.jpg" alt="애기1-2" class="s">
+                <img src="/img/h3.jpg" alt="애기1-3" class="s">
+            </div>
+
+        <script>
+            var big = document.querySelector(".big");
+            var spic = document.querySelectorAll(".s");
+
+            for (let i = 0; i < spic.length; i++) {
+                spic[i].addEventListener("click", change);
+            }
+
+            function change() {
+                var newPic = this.src;
+                big.setAttribute("src", newPic);
+            }
+        </script>
+        <p>
+            🎈<br>
+            이마에 까만 점이 있는 아기 고양이<br>
+            뭔가 억울해하는 것처럼 생겼다.<br>
+            민들레 홀씨처럼 털이 삐죽삐죽하고<br>
+            꼬리가 유난히 길며 주먹보다도 작았다.<br>
+            아기라서 눈 색도 나오지 않았다.
+        </p>
+        <br>
+        <img class="bbig" src="/img/h4.jpg" alt="애기1-4">
+            <div class="small">
+                <img src="img/h4.jpg" alt="애기1-4" class="ss">
+                <img src="/img/h5.jpg" alt="애기1-5" class="ss">
+                <img src="/img/h6.jpg" alt="애기1-6" class="ss">
+            </div>
+            
+        <script>
+            var bbig = document.querySelector(".bbig");
+            var spic = document.querySelectorAll(".ss");
+    
+            for (let i = 0; i < spic.length; i++) {
+                spic[i].addEventListener("click", change);
+            }
+    
+            function change() {
+                var newPic = this.src;
+                bbig.setAttribute("src", newPic);
+            }
+            </script>
+        <p>
+            🎉<br>
+            고양이라 그런지 좁은 틈에서 잘 잤다.<br>
+            창 밖을 보고 햇볕을 쬐는 걸 좋아하고,<br>
+            방충망을 스파이더맨처럼 올라가기도 했다.<br>
+            종이가 있으면 그 위에 앉아 방해하기도 했다.<br><br><br>
+        </p>
+
+    </main>
+</body>
+</html>

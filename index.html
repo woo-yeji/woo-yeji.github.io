@@ -1,45 +1,80 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>라이트박스</title>
-    <link rel="stylesheet" href="css/lightbox.css">
-  </head>
-  <body>
-    <div class="row">
-      <ul>
-        <li><img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic"></li>
-        <li><img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic"></li>
-        <li><img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic"></li> 
-        <li><img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic"></li>
-        <li><img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic"></li>
-        <li><img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic"></li>          
-      </ul>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무시는 무시무시</title>
+    <link rel="stylesheet" href="/css/1.css">
+</head>
+<body>
+    <div id="container">
+
+    <header>
+        <nav>
+            <div class="nav c1"><a href="무시.html">무시</a></div>
+            <div class="nav c2"><a href="민들레.html">민들레 홀씨</a></div>
+            <div class="nav c3"><a href="돼지감자.html">돼지감자</a></div>
+            <div class="nav c4"><a href="바보.html">바보</a></div>
+            <div class="nav c5"><a href="깐깐쟁이.html">깐깐쟁이</a></div>
+        </nav>
+    </header>
+
+   
+    <main>
+        <div class="m">
+
+            <div class="word">
+                <p class="bword">무시는 무시무시</p>
+                <p class="sword">
+                    🐾 무시란?<br>
+                    = 무시는 우리집 귀염둥이 막내 고양이의 이름이다.<br>
+                    ❤ 무시는?<br>
+                    = 무시의 나이, 성별 같은 기본적인 프로필이다.<br>
+                    ❤ 민들레 홀씨는?<br>
+                    = 어린 시절 사진, 당시 특징 등이 적힌 문서다.<br>
+                    ❤ 돼지감자는?<br>
+                    = 현재 사진, 특징 등이 적힌 문서다.<br>
+                    ❤ 바보는?<br>
+                    = 이상한 사진들과 말풍선 안에 들어갈 대사를<br>
+                    써볼 수 있는 문서다.<br>
+                    ❤ 깐깐쟁이는?<br>
+                    = 무시가 먹는 사료, 간식, 사용하는 모래 등이<br>
+                    적힌 문서다.
+
+                </p>
+            </div>
+            
+            <img class="big" src="/img/m1.jpg" alt="무시1">
+            <div class="small">
+                <img src="img/m1.jpg" alt="무시1" class="s">
+                <img src="/img/m2.jpg" alt="무시2" class="s">
+                <img src="/img/m3.jpg" alt="무시3" class="s">
+            </div>
+
+        <script>
+            var big = document.querySelector(".big");
+            var spic = document.querySelectorAll(".s");
+
+            for (let i = 0; i < spic.length; i++) {
+                spic[i].addEventListener("click", change);
+            }
+
+            function change() {
+                var newPic = this.src;
+                big.setAttribute("src", newPic);
+            }
+        </script>
+
+        </div>
+    </main>
+        
+    <footer>
+        <div class="f">
+        <p>개인 고양이 홈페이지, 2021년 12월 제작</p>
+        </div>
+    </footer>
+
     </div>
-
-    <div id="lightbox">
-			<img src="images/tree-1.jpg" alt="" id="lightboxImage">			
-    </div>
-
-    <script>
-      var pics = document.getElementsByClassName("pic"); // .pic인 요소들을 가져와 pics 라는 변수에 저장. querySelectorAll(".pic")도 가능
-      var lightbox = document.getElementById("lightbox");  // 라이트 박스. querySelector("#lightbox")도 가능
-      var lightboxImage = document.getElementById("lightboxImage");  // 라이트 박스 안의 이미지. querySelector("#lightboxImage")도 가능
-
-      for (i=0; i<pics.length; i++) {
-        pics[i].addEventListener("click", showLightbox);
-      }
-
-      function showLightbox() {
-				var bigLocation = this.getAttribute("data-src"); // bigLocation = this.data-src; 도 가능.
-				lightboxImage.setAttribute("src", bigLocation);  // lightboxImage.src = bigLocation; 도 가능.
-				lightbox.style.display = "block";  // 라이트박스 이미지를 화면에 표시
-      }
-      
-      lightbox.onclick = function() {  //click 이벤트가 발생했을 때 실행할 함수 선언
-				lightbox.style.display = "none";  // lightbox 요소를 화면에서 감춤
-      }
-    </script>
-  </body>
+</body>
 </html>
